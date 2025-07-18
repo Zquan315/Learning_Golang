@@ -10,7 +10,12 @@ func main() {
 	f.Println("\n--------------Running learn_closure function--------------")
 	learn_closure_main()
 	f.Println("\n--------------Running RunReadFile function--------------")
-	RunReadFile("../README.md")
+	filename := "../README.md"
+	RunReadFile(filename)
 	f.Println("\n--------------Running RunPAnic function--------------")
 	RunPAnic()
+	f.Println("\n--------------Running RunBook function--------------")
+	RunBook()
+	f.Println("\n--------------Running RunSquare function--------------")
+	RunSquare()
 }
