@@ -42,7 +42,7 @@ func updatePerson(lst map[string]string) {
 	var name string
 	f.Scan(&name)
 	if phone, exists := lst[name]; exists {
-		f.Print("Current phone is ", phone, ". Type new phone: ")
+		f.Print("Current phone is ", phone, ".\nType new phone: ")
 		var newPhone string
 		f.Scan(&newPhone)
 		lst[name] = newPhone
