@@ -5,7 +5,7 @@ import f "fmt"
 func addStudent(s []*Student, check map[string]bool) []*Student {
 	for {
 		var name, id, gender, gpa string
-		f.Print("Enter Student Name (Only contain a-z or A-Z)): ")
+		f.Print("Enter Student Name (Only contain a-z or A-Z): ")
 		f.Scan(&name)
 		f.Print("Enter Student ID (8 digits ): ")
 		f.Scan(&id)
