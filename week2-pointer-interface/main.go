@@ -1,6 +1,10 @@
 package main
 
-import f "fmt"
+import (
+	f "fmt"
+
+	"github.com/zquan315/learning_golang/w2-pointer-interface/day5_6_miniProject"
+)
 
 func main() {
 	var choice int
@@ -11,6 +15,7 @@ func main() {
 		f.Println("☰ 2. Manage Banking")
 		f.Println("☰ 3. Run basic Interface")
 		f.Println("☰ 4. Run advanced Interface")
+		f.Println("☰ 5. Run Mini Project")
 		f.Print("Enter your choice: ")
 		f.Scan(&choice)
 
@@ -27,6 +32,9 @@ func main() {
 		case 4:
 			f.Println("----- Day 3-4: Advanced Interface Example -----")
 			RunAdvancedInterface()
+		case 5:
+			f.Println("----- Day 5-6: Mini Project -----")
+			day5_6_miniProject.RunMiniProject()
 		case 0:
 			f.Println("Exiting the program.")
 			return
