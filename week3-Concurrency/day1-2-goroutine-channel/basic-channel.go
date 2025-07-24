@@ -21,7 +21,7 @@ func speValue(ch chan string) {
 	}
 }
 
-func RunChannel() {
+func RunBasicChannel() {
 	ch := make(chan string)
 	go func() {
 		stringValue(ch)

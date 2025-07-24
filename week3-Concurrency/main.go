@@ -4,6 +4,7 @@ import (
 	f "fmt"
 
 	goroutine_channel "github.com/zquan315/learning_golang/w3-concurrency/day1-2-goroutine-channel"
+	channel_immediate "github.com/zquan315/learning_golang/w3-concurrency/day3-4-channel-immediate"
 )
 
 func main() {
@@ -13,7 +14,8 @@ func main() {
 		f.Println("⭐ Welcome to the Concurrency Learning Program! ⭐")
 		f.Println("❌ 0. Exit")
 		f.Println("☰  1. Day 1: Goroutine")
-		f.Println("☰  2. Day 2: Channel")
+		f.Println("☰  2. Day 2: Basic Channel")
+		f.Println("☰  3. Day 3-4: Immediate Channel")
 
 		f.Print("Please choose a day to run: ")
 		f.Scan(&choice)
@@ -26,7 +28,10 @@ func main() {
 			goroutine_channel.RunGoRoutine()
 		case 2:
 			f.Println("--- Day 2: Basic Channel ---")
-			goroutine_channel.RunChannel()
+			goroutine_channel.RunBasicChannel()
+		case 3:
+			f.Println("--- Day 3-4: Immediate Channel ---")
+			channel_immediate.RunImmediateChannel()
 		default:
 			f.Println("❌ Invalid choice, please try again.\n------------")
 		}
