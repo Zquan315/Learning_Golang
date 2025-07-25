@@ -11,8 +11,8 @@ func calcx10(arr []*int, ch1 chan int, wg *sync.WaitGroup, mu *sync.Mutex) {
 	for i, v := range arr {
 		t.Sleep(t.Duration(rand.Intn(1000)+500) * t.Millisecond)
 		if *v < 10 {
-			n := *v
 			mu.Lock()
+			n := *v
 			*v *= 10
 			*arr[i] = *v
 			ch1 <- *v
@@ -27,8 +27,8 @@ func calcx100(arr []*int, ch2 chan int, wg *sync.WaitGroup, mu *sync.Mutex) {
 	for i, v := range arr {
 		t.Sleep(t.Duration(rand.Intn(1000)+500) * t.Millisecond)
 		if *v < 10 {
-			n := *v
 			mu.Lock()
+			n := *v
 			*v *= 100
 			*arr[i] = *v
 			ch2 <- *v
