@@ -74,23 +74,15 @@ func task_sample() {
 		}
 	}
 	f.Println("Converting task to JSON...")
-	file, err1 := o.OpenFile(`D:\TO_CONG_QUAN\Learning_Golang\week4-CLI-file-testing\day2-file\task.json`, o.O_APPEND|o.O_CREATE|o.O_WRONLY, 0664)
-	if err1 != nil {
-		f.Println("Error open file")
+	jsondata, err := json.MarshalIndent(task, "", "  ")
+	if err != nil {
+		f.Println("Error converting to JSON:", err)
 		return
 	}
-	defer file.Close()
-	for _, value := range task {
-		jsondata, err := json.MarshalIndent(value, "", "  ")
-		if err != nil {
-			f.Println("Error converting to JSON:", err)
-			return
-		}
-		_, err = file.Write(append(jsondata, '\n', '\n'))
-		if err != nil {
-			f.Println("Error writing JSON to file:", err)
-			return
-		}
+	err = o.WriteFile(`D:\TO_CONG_QUAN\Learning_Golang\week4-CLI-file-testing\day2-file\task.json`, jsondata, 0664)
+	if err != nil {
+		f.Println("Error writing JSON to file:", err)
+		return
 	}
 
 	json_content, err := o.ReadFile(`D:\TO_CONG_QUAN\Learning_Golang\week4-CLI-file-testing\day2-file\task.json`)

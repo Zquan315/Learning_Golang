@@ -1,15 +1,14 @@
-{
-  "Name": "sl",
-  "Status": true
-}
-
-{
-  "Name": "learn",
-  "Status": true
-}
-
-{
-  "Name": "play",
-  "Status": false
-}
-
+[
+  {
+    "Name": "Play",
+    "Status": true
+  },
+  {
+    "Name": "Sleep",
+    "Status": false
+  },
+  {
+    "Name": "Learn",
+    "Status": true
+  }
+]
