@@ -20,7 +20,7 @@ var listCmd = &cobra.Command {
 	Short: "list all task",
 	Long:  "Use list command to list all task",
 	Run: func(cmd *cobra.Command, args []string) {
-		fileJsonPath := `D:\TO_CONG_QUAN\Learning_Golang\week4-CLI-file-testing\todo\Tasks.json`
+		fileJsonPath := "tasks.json"
 		if !allFlag {
 			f.Println("Flag -all or -a is required")
 			return

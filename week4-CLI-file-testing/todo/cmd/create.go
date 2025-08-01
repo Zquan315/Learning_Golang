@@ -24,7 +24,7 @@ var createCmd = &cobra.Command{
 			f.Println("The flag name is required value ")
 			return;
 		}
-		fileJsonPath := `D:\TO_CONG_QUAN\Learning_Golang\week4-CLI-file-testing\todo\Tasks.json`
+		fileJsonPath := "tasks.json"
 		dataTask := []i.Task{}
 		jsoncontent, err1 := o.ReadFile(fileJsonPath)
 		if err1 == nil {
