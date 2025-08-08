@@ -1,0 +1,8 @@
+INFO: 2025/08/08 21:15:44 handler.go:14: Server started on port 3101
+INFO: 2025/08/08 21:16:06 post_prod.go:34: ✅ Add a product successfully
+INFO: 2025/08/08 21:16:13 delete_id.go:25: ✅ Delete a product successfully with ID: 2
+ERROR: 2025/08/08 21:16:21 delete_id.go:31: ID is not exists
+INFO: 2025/08/08 21:16:27 post_prod.go:34: ✅ Add a product successfully
+INFO: 2025/08/08 21:16:32 put_id.go:31: ✅ Update a product successfully
+ERROR: 2025/08/08 21:16:36 delete_id.go:31: ID is not exists
+INFO: 2025/08/08 21:16:39 delete_id.go:25: ✅ Delete a product successfully with ID: 2
